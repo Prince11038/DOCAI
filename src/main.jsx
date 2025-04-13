@@ -14,6 +14,10 @@ import User from './components/User.jsx'
 import UserHistory from './components/UserHistory.jsx'
 import SignIn from './components/SignIn.jsx'
 import Profile from './components/ProfileDetails.jsx'
+import Chatbot from './Chatbot/MedicalChatBot.jsx'
+import NutritionPlannerChatBot from "./Chatbot/NutritionPlannerChatBot";
+
+
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -28,7 +32,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/makeappointment" element={<MakeAppointment />} />
       <Route path="/userhistory" element={<UserHistory />} />
       <Route path="/profile" element={<Profile />} />
-
+      <Route path="/Chatbot" element={<Chatbot />} />
+      <Route path="/NutritionPlannerChatBot" element={<NutritionPlannerChatBot />} />
       <Route path="*" element={<Error/>} />
     </Routes>
     <Footer/>

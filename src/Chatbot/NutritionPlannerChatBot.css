@@ -1,0 +1,424 @@
+/* NutritionPlannerChatBot.css - Dark Theme */
+
+:root {
+  --docai-primary: #0be0dd; /* Teal accent color from website */
+  --docai-primary-hover: #09bbb9;
+  --nutrition-primary: #6bd968; /* Green for nutrition theme */
+  --nutrition-primary-hover: #5ac457;
+  --docai-dark-bg: #1e1f25; /* Main background color */
+  --docai-darker-bg: #16171d; /* Header and footer bg */
+  --docai-medium-bg: #2a2b33; /* Chat input bg */
+  --docai-light-text: #e9e9ea;
+  --docai-medium-text: #9fa0a7;
+  --docai-bot-msg-bg: #2d2e37;
+  --docai-user-msg-bg: #0b536b; /* Darker teal for user messages */
+  --nutrition-user-msg-bg: #28572b; /* Darker green for user messages */
+  --docai-border-radius: 12px;
+  --docai-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Main container */
+.docai-chatbot-container.nutrition-planner {
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  height: 750px; /* Slightly taller for example questions */
+  margin: 0 auto;
+  background-color: var(--docai-dark-bg);
+  border-radius: var(--docai-border-radius);
+  overflow: hidden;
+  box-shadow: var(--docai-shadow);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Header styling */
+.nutrition-planner .docai-chatbot-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: var(--docai-darker-bg);
+  color: var(--docai-light-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nutrition-planner .docai-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nutrition-planner .docai-logo-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nutrition-primary);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.nutrition-planner .docai-logo-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--docai-darker-bg);
+}
+
+.nutrition-planner .docai-logo h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--nutrition-primary);
+}
+
+.nutrition-planner .docai-chatbot-header p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: var(--docai-medium-text);
+}
+
+/* Messages container */
+.nutrition-planner .docai-chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--docai-dark-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Message styling */
+.nutrition-planner .docai-message {
+  display: flex;
+  margin-bottom: 16px;
+  max-width: 90%;
+  animation: docai-fade-in 0.3s ease;
+}
+
+@keyframes docai-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nutrition-planner .docai-message.bot {
+  align-self: flex-start;
+}
+
+.nutrition-planner .docai-message.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+/* Avatar styling */
+.nutrition-planner .docai-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: var(--docai-medium-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nutrition-planner .docai-avatar-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--nutrition-primary);
+}
+
+.nutrition-planner .docai-avatar-icon.user {
+  color: var(--docai-light-text);
+}
+
+.nutrition-planner .user-avatar {
+  margin-right: 0;
+  margin-left: 12px;
+  background-color: var(--nutrition-user-msg-bg);
+}
+
+/* Message content styling */
+.nutrition-planner .docai-message-content {
+  padding: 14px 18px;
+  border-radius: var(--docai-border-radius);
+  color: var(--docai-light-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  max-width: calc(100% - 60px);
+}
+
+.nutrition-planner .docai-message.bot .docai-message-content {
+  background-color: var(--docai-bot-msg-bg);
+  border-top-left-radius: 0;
+}
+
+.nutrition-planner .docai-message.user .docai-message-content {
+  background-color: var(--nutrition-user-msg-bg);
+  border-top-right-radius: 0;
+  text-align: right;
+}
+
+.nutrition-planner .docai-message.user p {
+  margin: 0;
+}
+
+/* Markdown content styling */
+.nutrition-planner .markdown-content {
+  color: var(--docai-light-text);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.nutrition-planner .markdown-content h2 {
+  color: var(--nutrition-primary);
+  font-size: 1.2rem;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 5px;
+}
+
+.nutrition-planner .markdown-content h3 {
+  color: var(--docai-light-text);
+  font-size: 1.1rem;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.nutrition-planner .markdown-content h2:first-child {
+  margin-top: 0;
+}
+
+.nutrition-planner .markdown-content p {
+  margin: 0 0 12px;
+}
+
+.nutrition-planner .markdown-content em {
+  color: var(--docai-medium-text);
+}
+
+.nutrition-planner .markdown-content strong {
+  color: var(--nutrition-primary);
+  font-weight: 600;
+}
+
+.nutrition-planner .markdown-content ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.nutrition-planner .markdown-content li {
+  margin-bottom: 8px;
+  margin-left: 12px;
+}
+
+/* Example questions section */
+.nutrition-planner .docai-example-questions {
+  background-color: rgba(107, 217, 104, 0.1);
+  padding: 12px 16px;
+  border-top: 1px solid rgba(107, 217, 104, 0.2);
+}
+
+.nutrition-planner .docai-example-questions p {
+  margin: 0 0 8px;
+  color: var(--nutrition-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nutrition-planner .docai-example-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nutrition-planner .docai-example-button {
+  background-color: rgba(107, 217, 104, 0.15);
+  border: 1px solid rgba(107, 217, 104, 0.3);
+  color: var(--docai-light-text);
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  max-width: 48%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nutrition-planner .docai-example-button:hover {
+  background-color: rgba(107, 217, 104, 0.25);
+}
+
+/* Loading animation */
+.nutrition-planner .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.nutrition-planner .typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.nutrition-planner .typing-indicator span {
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: var(--nutrition-primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation: bouncingLoader 1.4s infinite ease-in-out both;
+  opacity: 0.7;
+}
+
+.nutrition-planner .typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.nutrition-planner .typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bouncingLoader {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Input area */
+.nutrition-planner .docai-chat-input {
+  display: flex;
+  padding: 14px 20px;
+  background-color: var(--docai-darker-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nutrition-planner .docai-chat-input textarea {
+  flex: 1;
+  border: none;
+  background-color: var(--docai-medium-bg);
+  border-radius: 24px;
+  padding: 14px 20px;
+  color: var(--docai-light-text);
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  min-height: 24px;
+  max-height: 120px;
+}
+
+.nutrition-planner .docai-chat-input textarea::placeholder {
+  color: var(--docai-medium-text);
+}
+
+.nutrition-planner .docai-chat-input textarea:focus {
+  box-shadow: 0 0 0 2px rgba(107, 217, 104, 0.3);
+}
+
+/* Send button styling */
+.nutrition-planner .docai-send-button {
+  width: 46px;
+  height: 46px;
+  margin-left: 12px;
+  background-color: var(--nutrition-primary);
+  color: var(--docai-darker-bg);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nutrition-planner .docai-send-button:hover {
+  background-color: var(--nutrition-primary-hover);
+  transform: scale(1.05);
+}
+
+.nutrition-planner .docai-send-button:disabled {
+  background-color: var(--docai-medium-bg);
+  color: var(--docai-medium-text);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+.nutrition-planner .docai-send-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Disclaimer */
+.nutrition-planner .docai-chat-disclaimer {
+  padding: 10px 16px;
+  background-color: var(--docai-darker-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nutrition-planner .docai-chat-disclaimer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--docai-medium-text);
+  text-align: center;
+}
+
+/* Scrollbar styling */
+.nutrition-planner .docai-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nutrition-planner .docai-chat-messages::-webkit-scrollbar-track {
+  background: var(--docai-dark-bg);
+}
+
+.nutrition-planner .docai-chat-messages::-webkit-scrollbar-thumb {
+  background-color: var(--docai-medium-bg);
+  border-radius: 20px;
+}
+
+.nutrition-planner .docai-chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: var(--nutrition-primary-hover);
+}
+
+/* Ensure responsive design */
+@media (max-width: 768px) {
+  .docai-chatbot-container.nutrition-planner {
+    height: 85vh;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  
+  .nutrition-planner .docai-message {
+    max-width: 95%;
+  }
+  
+  .nutrition-planner .docai-example-button {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  .nutrition-planner .docai-example-buttons {
+    flex-direction: column;
+  }
+}

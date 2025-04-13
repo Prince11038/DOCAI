@@ -1,0 +1,365 @@
+/* MedicalChatBot.css - Dark Theme */
+
+:root {
+  --docai-primary: #0be0dd; /* Teal accent color from website */
+  --docai-primary-hover: #09bbb9;
+  --docai-dark-bg: #1e1f25; /* Main background color */
+  --docai-darker-bg: #16171d; /* Header and footer bg */
+  --docai-medium-bg: #2a2b33; /* Chat input bg */
+  --docai-light-text: #e9e9ea;
+  --docai-medium-text: #9fa0a7;
+  --docai-bot-msg-bg: #2d2e37;
+  --docai-user-msg-bg: #0b536b; /* Darker teal for user messages */
+  --docai-border-radius: 12px;
+  --docai-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Main container */
+.docai-chatbot-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: var(--docai-dark-bg);
+  border-radius: var(--docai-border-radius);
+  overflow: hidden;
+  box-shadow: var(--docai-shadow);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Header styling */
+.docai-chatbot-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: var(--docai-darker-bg);
+  color: var(--docai-light-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.docai-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.docai-logo-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--docai-primary);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.docai-logo-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--docai-darker-bg);
+}
+
+.docai-logo h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--docai-primary);
+}
+
+.docai-chatbot-header p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: var(--docai-medium-text);
+}
+
+/* Messages container */
+.docai-chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--docai-dark-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Message styling */
+.docai-message {
+  display: flex;
+  margin-bottom: 16px;
+  max-width: 90%;
+  animation: docai-fade-in 0.3s ease;
+}
+
+@keyframes docai-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.docai-message.bot {
+  align-self: flex-start;
+}
+
+.docai-message.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+/* Avatar styling */
+.docai-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: var(--docai-medium-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.docai-avatar-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--docai-primary);
+}
+
+.docai-avatar-icon.user {
+  color: var(--docai-light-text);
+}
+
+.user-avatar {
+  margin-right: 0;
+  margin-left: 12px;
+  background-color: var(--docai-user-msg-bg);
+}
+
+/* Message content styling */
+.docai-message-content {
+  padding: 14px 18px;
+  border-radius: var(--docai-border-radius);
+  color: var(--docai-light-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  max-width: calc(100% - 60px);
+}
+
+.docai-message.bot .docai-message-content {
+  background-color: var(--docai-bot-msg-bg);
+  border-top-left-radius: 0;
+}
+
+.docai-message.user .docai-message-content {
+  background-color: var(--docai-user-msg-bg);
+  border-top-right-radius: 0;
+  text-align: right;
+}
+
+.docai-message.user p {
+  margin: 0;
+}
+
+/* Markdown content styling */
+.markdown-content {
+  color: var(--docai-light-text);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.markdown-content h2 {
+  color: var(--docai-primary);
+  font-size: 1.2rem;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 5px;
+}
+
+.markdown-content h2:first-child {
+  margin-top: 0;
+}
+
+.markdown-content p {
+  margin: 0 0 12px;
+}
+
+.markdown-content em {
+  color: var(--docai-medium-text);
+}
+
+.markdown-content strong {
+  color: var(--docai-primary);
+  font-weight: 600;
+}
+
+.markdown-content ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.markdown-content li {
+  margin-bottom: 8px;
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: var(--docai-primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation: bouncingLoader 1.4s infinite ease-in-out both;
+  opacity: 0.7;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bouncingLoader {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Input area */
+.docai-chat-input {
+  display: flex;
+  padding: 14px 20px;
+  background-color: var(--docai-darker-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.docai-chat-input textarea {
+  flex: 1;
+  border: none;
+  background-color: var(--docai-medium-bg);
+  border-radius: 24px;
+  padding: 14px 20px;
+  color: var(--docai-light-text);
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  min-height: 24px;
+  max-height: 120px;
+}
+
+.docai-chat-input textarea::placeholder {
+  color: var(--docai-medium-text);
+}
+
+.docai-chat-input textarea:focus {
+  box-shadow: 0 0 0 2px rgba(11, 224, 221, 0.3);
+}
+
+/* Send button styling */
+.docai-send-button {
+  width: 46px;
+  height: 46px;
+  margin-left: 12px;
+  background-color: var(--docai-primary);
+  color: var(--docai-darker-bg);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.docai-send-button:hover {
+  background-color: var(--docai-primary-hover);
+  transform: scale(1.05);
+}
+
+.docai-send-button:disabled {
+  background-color: var(--docai-medium-bg);
+  color: var(--docai-medium-text);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+.docai-send-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Disclaimer */
+.docai-chat-disclaimer {
+  padding: 10px 16px;
+  background-color: var(--docai-darker-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.docai-chat-disclaimer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--docai-medium-text);
+  text-align: center;
+}
+
+/* Scrollbar styling */
+.docai-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.docai-chat-messages::-webkit-scrollbar-track {
+  background: var(--docai-dark-bg);
+}
+
+.docai-chat-messages::-webkit-scrollbar-thumb {
+  background-color: var(--docai-medium-bg);
+  border-radius: 20px;
+}
+
+.docai-chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: var(--docai-primary-hover);
+}
+
+/* Ensure responsive design */
+@media (max-width: 768px) {
+  .docai-chatbot-container {
+    height: 80vh;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  
+  .docai-message {
+    max-width: 95%;
+  }
+}

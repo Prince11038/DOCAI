@@ -33,32 +33,19 @@ function Body() {
                 link="https://mindfulness-5pun.onrender.com"
                 text="Chat with us"
             />
-            <Card   
+
+
+        </div>  
+
+        <div className="row2">
+            <Card
                 image={Checkup}
                 title="General Checkup"
                 description="Physical medicine and rehabilitation (PM&R) for mobility issues."
                 link="https://mindfulness-5pun.onrender.com"
                 text="Chat with us"
             />
-
-        </div>  
-
-        <div className="row2">
-            <Card   
-                image={Radiology}
-                title="Radiology"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
-                link="https://mindfulness-5pun.onrender.com"
-                text="Chat with us"
-            />
-
-            <Card   
-                image={Dermatology}
-                title="Dermatology"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
-                link="https://mindfulness-5pun.onrender.com"
-                text="Chat with us"
-            />
+            
             <Card   
                 image={Doctor}
                 title="Doctor"
