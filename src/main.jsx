@@ -17,6 +17,9 @@ import Profile from './components/ProfileDetails.jsx'
 import Chatbot from './Chatbot/MedicalChatBot.jsx'
 import NutritionPlannerChatBot from "./Chatbot/NutritionPlannerChatBot";
 
+import HealthDataPage from './components/HealthDataPage.jsx';
+import MedicalRecordsPage from './components/MedicalRecordsPage.jsx'
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -35,6 +38,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/Chatbot" element={<Chatbot />} />
       <Route path="/NutritionPlannerChatBot" element={<NutritionPlannerChatBot />} />
       <Route path="*" element={<Error/>} />
+      <Route path="/health-data" element={<HealthDataPage />} />
+      <Route path="/medical-records" element={<MedicalRecordsPage />} />
     </Routes>
     <Footer/>
   </BrowserRouter>

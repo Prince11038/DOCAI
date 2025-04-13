@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DOCAI from '../assets/image/DocHome.png';
+import DOCAI from '../assets/image/DOCHome.png';
 import './Home.css';
 
 const Home = () => {

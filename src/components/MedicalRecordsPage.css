@@ -1,0 +1,63 @@
+/* MedicalRecordsPage.css */
+
+.medical-records-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .medical-records-page h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: #3498dc;
+  }
+  
+  .records-section {
+    margin-bottom: 3rem;
+  }
+  
+  .records-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+    border-left: 5px solid #3498db;
+    padding-left: 0.6rem;
+  }
+  
+  .records-section table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .records-section th,
+  .records-section td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .records-section th {
+    background-color: #f5f7fa;
+    font-weight: 600;
+  }
+  
+  .records-section tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .records-section a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .records-section a:hover {
+    text-decoration: underline;
+  }
+  
