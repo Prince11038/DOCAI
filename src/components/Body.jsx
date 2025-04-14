@@ -12,6 +12,7 @@ import Checkup from "../assets/image/Checkup.svg";
 import Dermatology from "../assets/image/Dermatology.svg";
 import Doctor from "../assets/image/MedicalProfessional.svg";
 import Medicine from "../assets/image/Medicine.svg";
+import {Link} from "react-router-dom";
 
 function Body() {
   return (
@@ -22,14 +23,14 @@ function Body() {
             <Card   
                 image={Physiatry}
                 title="Mental Health"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
-                link="https://mindfulness-5pun.onrender.com"
+                description="Empower your emotional well-being for stress, anxiety, and self-care."
+                link="https://preview--mindful-companion-hub.lovable.app/"
                 text="Try it now"
             />
             <Card   
                 image={Nutrition}
                 title="Nutrition"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
+                description="Your smart food companion for balanced meals and a healthier you."
                 link="https://mindfulness-5pun.onrender.com"
                 text="Chat with us"
             />
@@ -41,7 +42,7 @@ function Body() {
             <Card
                 image={Checkup}
                 title="General Checkup"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
+                description="Your 24/7 virtual health assistant for fast, accurate medical support."
                 link="https://mindfulness-5pun.onrender.com"
                 text="Chat with us"
             />
@@ -49,7 +50,7 @@ function Body() {
             <Card   
                 image={Doctor}
                 title="Doctor"
-                description="Physical medicine and rehabilitation (PM&R) for mobility issues."
+                description="Get in the touch with a Real doctor for your health-related queries."
                 link="https://mindfulness-5pun.onrender.com"
                 text="Book an appointment"
             />

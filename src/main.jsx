@@ -37,9 +37,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/profile" element={<Profile />} />
       <Route path="/Chatbot" element={<Chatbot />} />
       <Route path="/NutritionPlannerChatBot" element={<NutritionPlannerChatBot />} />
-      <Route path="*" element={<Error/>} />
-      <Route path="/health-data" element={<HealthDataPage />} />
+      <Route path="/health-data" element={<HealthDataPage/>} />
       <Route path="/medical-records" element={<MedicalRecordsPage />} />
+      <Route path="*" element={<Error/>} />
     </Routes>
     <Footer/>
   </BrowserRouter>

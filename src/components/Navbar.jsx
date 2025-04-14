@@ -27,6 +27,12 @@ function Navbar() {
 
         <Link to="/About">
           <div className="nav-list-item">
+            <Button text="Mental Support" />
+          </div>
+        </Link>
+
+        <Link to="/About">
+          <div className="nav-list-item">
             <Button text="About Us" />
           </div>
         </Link>

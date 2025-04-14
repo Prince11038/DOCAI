@@ -27,8 +27,8 @@ const User = () => {
           <div className="popup-main">
             <ul className="list-box">
               <li className="button item">Profile</li>
-              <li className="button item">Appointment</li>
-              <li className="button item">Recent History</li>
+              <li className="button item">My FitData</li>
+              <li className="button item">Fit History</li>
               <li className="button item">Log Out</li>
               <ul />
             </ul>
